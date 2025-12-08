@@ -39,19 +39,6 @@ This tool is built for cybersecurity professionals, students, analysts, and hobb
 * Clean, bold typography & spacing
 * Smooth modern feel
 
----
-
-# 📷 **Screenshots**
-
-*Add your screenshots here later:*
-
-```
-/screenshots/
-   ├── light_mode.png
-   ├── dark_mode.png
-   ├── mask_tab.png
-   ├── vt_scan.png
-```
 
 ---
 
