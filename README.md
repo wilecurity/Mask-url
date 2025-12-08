@@ -175,9 +175,3 @@ If you like the work:
 * Follow Wilecurity on GitHub
 
 ---
-
-# 🧑‍💻 **Author**
-
-**Wilecurity**
-Cybersecurity Engineer & Researcher
-Focused on Open-Source Security Tools + Exploit Research
