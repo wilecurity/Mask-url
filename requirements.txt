@@ -1,8 +1,8 @@
-certifi==2021.5.30
-chardet==4.0.0
-idna==3.3
-requests>=2.28.2
-urllib3==2.6.0
+requests>=2.32.4
+certifi>=2025.8.3
+chardet>=5.2.0
+idna>=3.4
+urllib3>=2.6.0
 
 
 # Note: Tkinter is required for the GUI but must be installed separately:
