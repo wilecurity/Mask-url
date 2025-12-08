@@ -1,49 +1,212 @@
+Here is your **fully polished, modern, professionally written `README.md`**, with everything cleanly combined — Tkinter installation, features, usage, credits, disclaimers, screenshots section, and more.
+
+You can **copy-paste directly into your repository**.
 
 ---
 
-# Maskurl-Detect
+# 🚀 **MaskURL-Detect – Modern URL Masking & Security Scanner Tool**
 
-**Maskurl-Detect** is a Python tool designed to mask URLs and check their reputation using the VirusTotal API. It combines convenience with security, allowing users to safely mask URLs and verify their legitimacy.
+MaskURL-Detect is a modern Python-based cybersecurity utility developed by **Wilecurity**.
+It allows you to **mask URLs** with custom domains + keywords and **verify URL reputation** using the **VirusTotal API**, all through a clean and interactive **GUI application** with togglable **Dark Mode**.
 
-## 🌟 **Key Features**
-
-- **URL Masking:** Shorten long URLs with a custom domain and keywords using the is.gd service.
-- **VirusTotal Integration:** Automatically check the reputation of URLs via the VirusTotal API, helping identify malicious or fraudulent links.
-- **API Key Validation:** Validate your VirusTotal API key to ensure seamless and secure URL reputation checks.
-
-## 🚀 **How It Works**
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/wilecurity/Maskurl-detect.git
-   ```
-
-2. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the Script:**
-   ```bash
-   python3 Maskurl-detect.py
-   ```
-
-## ⚙️ **Configuration**
-
-Before running the script, ensure you have a valid VirusTotal API key, which will be requested upon running the program.
-
-## ⚠️ **Disclaimer**
-
-This script is intended for **educational purposes** only. The developers are not liable for any misuse. Use responsibly, and always ensure your actions are legal within your jurisdiction.
-
-## 🔄 **Future Updates**
-
-We are actively working on enhancing Maskurl-Detect. Upcoming updates include:
-- **Additional Masking Services**: More options to customize how your URLs are masked.
-- **Expanded API Integration**: Utilize other security APIs for even more robust URL analysis.
-- **Error Handling**: Improved user feedback and error management.
-- **Bug Fixes & Optimizations**: Regular maintenance to keep the tool efficient and user-friendly.
-
-Feel free to **contribute**, **suggest features**, or **report issues**. We appreciate your support!
+This tool is built for cybersecurity professionals, students, analysts, and hobbyists who need quick URL masking and threat verification in one place.
 
 ---
+
+# 🌟 **Features**
+
+### 🔒 **URL Masking**
+
+* Shortens URLs using **is.gd**
+* Auto-formats into a masked pattern:
+  `domain-keywords@shorturl`
+* Creates phishing-style educational examples for security training
+
+### 🛡️ **VirusTotal URL Reputation Scanner**
+
+* Submit URLs directly to VirusTotal
+* Checks:
+
+  * ✔ malicious
+  * ✔ suspicious
+  * ✔ undetected
+* Real-time API key validation
+
+### 🎨 **Modern GUI (Tkinter)**
+
+* Two tab layout:
+
+  * **Mask URL**
+  * **Verify URL with VirusTotal**
+* **Dark Mode toggle**
+* **Loading animations**
+* Clean, bold typography & spacing
+* Smooth modern feel
+
+---
+
+# 📷 **Screenshots**
+
+*Add your screenshots here later:*
+
+```
+/screenshots/
+   ├── light_mode.png
+   ├── dark_mode.png
+   ├── mask_tab.png
+   ├── vt_scan.png
+```
+
+---
+
+# 🧰 **Installation**
+
+Clone the repository:
+
+```bash
+git clone https://github.com/wilecurity/Maskurl-detect.git
+cd Maskurl-detect
+```
+
+Install Python project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🧩 **Install Tkinter (Required for the GUI)**
+
+## 🐧 **Ubuntu / Debian / Kali / Linux Mint**
+
+```bash
+sudo apt update
+sudo apt install python3-tk
+```
+
+## 🟥 **Fedora / CentOS / RHEL**
+
+```bash
+sudo dnf install python3-tkinter
+```
+
+## 🍎 **macOS**
+
+If using Python installed via `python.org`, Tkinter is already included.
+
+If using Homebrew Python:
+
+```bash
+brew install python-tk
+```
+
+## 🪟 **Windows**
+
+Tkinter is already included with Python from **python.org**.
+If you get an error:
+
+* Reinstall Python
+* Ensure **"tcl/tk and IDLE"** is selected during installation
+
+---
+
+# ▶️ **Running the Application**
+
+```bash
+python3 Maskurl-detect.py
+```
+
+The modern GUI will load instantly.
+
+---
+
+# 🔑 **VirusTotal API Key Setup**
+
+1. Create a VirusTotal account
+2. Go to: **User → API Key**
+3. Copy your key
+4. Paste into the GUI when asked
+
+---
+
+# 📦 **Project Structure**
+
+```
+Maskurl-detect/
+│── Maskurl-detect.py
+│── README.md
+│── requirements.txt
+│── screenshots/
+│── LICENSE (optional)
+```
+
+---
+
+# ⚙️ **Under the Hood (Technical Overview)**
+
+* GUI built using **Tkinter** + **ttk themes**
+* REST API requests via the **requests** module
+* URL shortening using **is.gd**
+* VirusTotal scanning uses:
+
+  * `/api/v3/urls` (submit)
+  * `/api/v3/analyses/{id}` (retrieve results)
+* Modern interface elements:
+
+  * Dark mode styles
+  * Loading animations
+  * Enhanced labels + typography
+  * Tabbed notebook interface
+
+---
+
+# ⚖️ **Disclaimer**
+
+This tool is created for **cybersecurity education and research**.
+Wilecurity **does NOT endorse misuse** of URL masking for fraud, phishing, or crime.
+
+You are responsible for complying with your country’s laws.
+
+---
+
+# 🤝 **Contributing**
+
+Pull requests are welcome!
+
+You can contribute by:
+
+* Adding new URL masking services
+* Improving the GUI
+* Adding threat-intelligence APIs (IPinfo, AbuseIPDB, URLScan)
+* Creating detailed phishing awareness demos
+
+---
+
+# ⭐ **Support the Project**
+
+If you like the work:
+
+* Star ⭐ the repository
+* Share with cybersecurity learners
+* Follow Wilecurity on GitHub
+
+---
+
+# 🧑‍💻 **Author**
+
+**Wilecurity**
+Cybersecurity Engineer & Researcher
+Focused on Open-Source Security Tools + Exploit Research
+
+---
+
+If you want, I can also:
+
+✅ Create a **beautiful project banner/logo**
+✅ Generate screenshots automatically
+✅ Create a `requirements.txt` file
+✅ Add a license
+✅ Add GitHub action badges
+
+Just tell me!
