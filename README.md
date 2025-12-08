@@ -1,8 +1,4 @@
-Here is your **fully polished, modern, professionally written `README.md`**, with everything cleanly combined — Tkinter installation, features, usage, credits, disclaimers, screenshots section, and more.
 
-You can **copy-paste directly into your repository**.
-
----
 
 # 🚀 **MaskURL-Detect – Modern URL Masking & Security Scanner Tool**
 
