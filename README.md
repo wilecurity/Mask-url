@@ -198,15 +198,3 @@ If you like the work:
 **Wilecurity**
 Cybersecurity Engineer & Researcher
 Focused on Open-Source Security Tools + Exploit Research
-
----
-
-If you want, I can also:
-
-✅ Create a **beautiful project banner/logo**
-✅ Generate screenshots automatically
-✅ Create a `requirements.txt` file
-✅ Add a license
-✅ Add GitHub action badges
-
-Just tell me!
