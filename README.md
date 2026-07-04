@@ -1,8 +1,8 @@
 
 
-# 🚀 **MaskURL-Detect – Modern URL Masking & Security Scanner Tool**
+# 🚀 **MaskURL – Modern URL Masking & Security Scanner Tool**
 
-MaskURL-Detect is a modern Python-based cybersecurity utility developed by **Wilecurity**.
+MaskURL is a modern Python-based cybersecurity utility developed by **Wilecurity**.
 It allows you to **mask URLs** with custom domains + keywords and **verify URL reputation** using the **VirusTotal API**, all through a clean and interactive **GUI application** with togglable **Dark Mode**.
 
 This tool is built for cybersecurity professionals, students, analysts, and hobbyists who need quick URL masking and threat verification in one place.
@@ -47,8 +47,8 @@ This tool is built for cybersecurity professionals, students, analysts, and hobb
 Clone the repository:
 
 ```bash
-git clone https://github.com/wilecurity/Maskurl-detect.git
-cd Maskurl-detect
+git clone https://github.com/wilecurity/Mask-url.git
+cd Mask-url
 ```
 
 Install Python project dependencies:
@@ -97,7 +97,7 @@ If you get an error:
 # ▶️ **Running the Application**
 
 ```bash
-python3 Maskurl-detect.py
+python3 maskurl.py
 ```
 
 The modern GUI will load instantly.
@@ -116,8 +116,8 @@ The modern GUI will load instantly.
 # 📦 **Project Structure**
 
 ```
-Maskurl-detect/
-│── Maskurl-detect.py
+Mask-url/
+│── maskurl.py
 │── README.md
 │── requirements.txt
 │── screenshots/
