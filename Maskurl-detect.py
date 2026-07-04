@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-"""
-MaskURL Detect - Modern Tkinter GUI
-Features:
-- Two tabs: Mask URL & Verify URL (VirusTotal)
-- Light/Dark mode toggle (top-right)
-- Bold typography
-- Non-blocking network calls with threading
-- Smooth "Loading..." animation and status updates
-- Copy-to-clipboard and clear buttons
-- Minimal dependencies: standard library + requests
-"""
 
 import requests
 from urllib.parse import urlparse
@@ -20,23 +9,41 @@ import threading
 import time
 import urllib.parse
 
-# ---------------------------
-# Backend helpers (network)
-# ---------------------------
+
 def ShortenURL(original_url, timeout=15):
-    """Shorten the URL using is.gd (returns domain+path or None)."""
+    """
+    Shorten the URL using is.gd, fallback to TinyURL, else return the original domain+path.
+    Returns domain+path string (e.g., "is.gd/abc123" or "tinyurl.com/xyz").
+    """
+    
     try:
         encoded = urllib.parse.quote_plus(original_url)
         resp = requests.post(f"https://is.gd/create.php?format=json&url={encoded}", timeout=timeout)
         if resp.status_code == 200:
-            payload = resp.json()
-            short_url = payload.get("shorturl")
+            data = resp.json()
+            if "shorturl" in data:
+                short_url = data["shorturl"]
+                parsed = urlparse(short_url)
+                return parsed.netloc + parsed.path
+           
+    except Exception:
+        pass
+
+  
+    try:
+        encoded = urllib.parse.quote_plus(original_url)
+        resp = requests.get(f"https://tinyurl.com/api-create.php?url={encoded}", timeout=timeout)
+        if resp.status_code == 200:
+            short_url = resp.text.strip()  
             if short_url:
                 parsed = urlparse(short_url)
                 return parsed.netloc + parsed.path
     except Exception:
-        return None
-    return None
+        pass
+
+
+    parsed = urlparse(original_url)
+    return parsed.netloc + parsed.path
 
 def ValidateVirusTotalAPIKey(api_key, timeout=10):
     """Validate VirusTotal API key by checking the current user endpoint."""
@@ -91,9 +98,7 @@ def CheckVirusTotal(api_key, url, timeout=15, poll_interval=1.2, max_wait=20):
     except Exception as e:
         return False, f"Error contacting VirusTotal: {e}"
 
-# ---------------------------
-# GUI & UX
-# ---------------------------
+
 class MaskURLApp:
     def __init__(self, root):
         self.root = root
